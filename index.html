@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+<div>
+    <div class="flex">
+        <!--<sideNav/>-->
+        <div class="relative flex min-h-screen sideNav">
+            <!--mobile menu bar-->
+            <div class="absolute">
+                <div class="text-black flex items-center mt-4">
+                    <!--mobile menu button-->
+                    <button id="mobile-menu-button" class="mobile-menu-button p-4 focus:outline-none">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                             stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!--sidebar-->
+            <div id="sidebar"
+                 class="sidebar side-nav bg-yellow-100 text-black w-72 space-y-6 py-7 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+                <!--mobile close button-times-->
+                <div class="flex justify-end mx-2 md:hidden lg:hidden">
+                    <button id="mobile-menu-close" class="mobile-menu-button focus:outline-none">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                             stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <!--logo-->
+                <div class="flex items-center justify-center py-8">
+                    <img src="../assets/INTERN-TEST.png" alt="">
+                </div>
+                <!--nav-->
+                <nav class="mt-12">
+                    <ul class="">
+                        <li class="sideBarMenu border border-red-500">
+                            <router-link class="sideBarText" exact to="/tariffs">
+                                <span class="pl-16">
+                                    <font-awesome-icon icon="wallet"/>
+                                    <span class="ml-4">{{ content.link_2 }}</span>
+                                </span>
+                            </router-link>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="w-full">
+            <!--<mainNavBar/>-->
+            <div></div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

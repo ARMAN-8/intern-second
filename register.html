@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Регистрация</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+<div class="bg-blue-600">
+    <div class="flex grid lg:grid-cols-2">
+        <div class="lg:m-10 md:m-8 m-6">
+            <img src="./img/icon/logo.png" alt=""/>
+        </div>
+        <div class="bg-white lg:py-32 md:py-8 py-12 lg:px-40 md:px-36 px-12">
+            <div class="space-y-8">
+                <div class="text-2xl font-normal">
+                    Регистрация
+                </div>
+                <div class="flex justify-between">
+                    <a href="#"><img src="./img/icon/google.svg" alt=""/></a>
+                    <a href="#"><img src="./img/icon/facebook.svg" alt=""/></a>
+                </div>
+                <div class="text-center text-lg font-normal grey-text">
+                    или
+                </div>
+                <div class="space-y-12">
+                    <div>
+                        <input class="w-full border-b focus:border-none"
+                               type="text" placeholder="ФИО"/>
+                    </div>
+                    <div>
+                        <input class="w-full border-b focus:border-none"
+                               type="email" placeholder="Почта"/>
+                    </div>
+                    <div>
+                        <input class="w-full border-b focus:border-none"
+                               type="password" placeholder="Пароль"/>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <button class="w-full create-account-btn text-base text-white font-medium">Создать аккаунт</button>
+                </div>
+                <div class="font-normal text-base grey-text">
+                    У вас есть аккаунт? Войти?
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
