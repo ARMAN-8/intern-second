@@ -12,6 +12,16 @@ body {
     color: #4C7CFF;
 }
 
+.sideBarMenu {
+    color: #ffffff;
+}
+
+.sideBarMenu:hover {
+    background: #E5E5E5;
+    border-radius: 51.24px 0 0 51.24px;;
+    color: #4C7CFF;
+}
+
 /*blue text with shadow*/
 .b-t-w-shadow {
     font-style: normal;
