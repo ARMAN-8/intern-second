@@ -5,155 +5,166 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Главная</title>
+    <title>Document</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/control-panel.css"/>
 </head>
 <body>
 
 <div>
-    <div class="flex">
-        <!--<sideNav/>-->
-        <div class="relative flex min-h-screen sideNav">
-            <!--mobile menu bar-->
-            <div class="absolute">
-                <div class="text-black flex items-center mt-4">
-                    <!--mobile menu button-->
-                    <button id="mobile-menu-button" class="mobile-menu-button p-4 focus:outline-none">
-                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <!--sidebar-->
-            <div id="sidebar"
-                 class="blue sidebar side-nav text-black w-72 space-y-6 py-7 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
-                <!--mobile close button-times-->
-                <div class="flex justify-end mx-2 md:hidden lg:hidden">
-                    <button id="mobile-menu-close" class="mobile-menu-button focus:outline-none">
-                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
-                    </button>
-                </div>
-                <!--logo-->
-                <div class="m-8">
-                    <img src="./img/icon/logo.svg" alt=""/>
-                </div>
-                <!--nav-->
-                <nav class="mt-12">
-                    <ul class="">
-                        <li class="sideBarMenu border border-red-500">
-                            <router-link class="sideBarText" exact to="/tariffs">
-                                <span class="pl-16">
-                                    <font-awesome-icon icon="wallet"/>
-                                    <span class="ml-4">Главная</span>
-                                </span>
-                            </router-link>
-                        </li>
-                        <li class="sideBarMenu border border-red-500">
-                            <router-link class="sideBarText" exact to="/tariffs">
-                                <span class="pl-16">
-                                    <font-awesome-icon icon="wallet"/>
-                                    <span class="ml-4">Кабинет</span>
-                                </span>
-                            </router-link>
-                        </li>
-                        <li class="sideBarMenu border border-red-500">
-                            <router-link class="sideBarText" exact to="/tariffs">
-                                <span class="pl-16">
-                                    <font-awesome-icon icon="wallet"/>
-                                    <span class="ml-4">Уроки</span>
-                                </span>
-                            </router-link>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li class="mx-4 my-8">
+                    <a href="#">
+                        <img src="./img/icon/logo.svg" alt="main logo"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home"></ion-icon>
+                        </span>
+                        <span class="title">Главная</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="person"></ion-icon>
+                        </span>
+                        <span class="title">Кабинет</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="document"></ion-icon>
+                        </span>
+                        <span class="title">Уроки</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="w-full mx-8 mt-8">
-            <!--<mainNavBar/>-->
-            <div>
-                <div class="font-medium lg:text-4xl">
-                    Уроки
-                </div>
-            </div>
 
-            <div class="mt-8">
-                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-                    <div class="col-span-2">
-                        <div class="bg-white shadow-lg p-8 rounded-3xl">
-                            <div class="font-medium text-2xl">
-                                Видеоуроки
-                            </div>
-                            <div class="font-normal text-xl">
-                                Развивайся вместе с iTalent
-                            </div>
-                            <div class="flex justify-between mt-4">
-                                <img src="./img/it-1.svg" alt=""/>
-                                <img src="./img/it-2.svg" alt=""/>
-                            </div>
-                            <div class="flex justify-between">
-                                <img src="./img/it-3.svg" alt=""/>
-                                <img src="./img/it-4.svg" alt=""/>
-                            </div>
-                        </div>
-                    </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu"></ion-icon>
+                </div>
+                <!--<div class="search">
+                    <input type="text">
+                </div>-->
+                <!--<div class="userImg">
+                    <img src="" alt="">
+                </div>-->
+            </div>
+            <!--cards-->
+            <div class="cardBox">
+                <div class="">
+                    <!--<mainNavBar/>-->
                     <div>
-                        <div class="font-normal text-2xl mb-4">Дополнительные материалы</div>
-                        <div class="bg-white shadow-lg p-8 rounded-3xl mb-4">
-                            <div class="flex justify-between mb-4">
-                                <div class="font-medium text-2xl">Книги</div>
-                                <div class="blue-color text-xl font-normal">Еще</div>
+                        <div class="font-medium lg:text-4xl md:text-3xl text-2xl">
+                            Уроки
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+                            <div class="col-span-2">
+                                <div class="bg-white shadow-lg pt-4 pb-16 px-4 rounded-3xl">
+                                    <div class="font-medium text-2xl">
+                                        Видеоуроки
+                                    </div>
+                                    <div class="font-normal text-xl">
+                                        Развивайся вместе с iTalent
+                                    </div>
+                                    <div class="flex justify-between mt-8">
+                                        <img src="./img/it-1.svg" alt=""/>
+                                        <img src="./img/it-2.svg" alt=""/>
+                                    </div>
+                                    <div class="flex justify-between mt-8">
+                                        <img src="./img/it-3.svg" alt=""/>
+                                        <img src="./img/it-4.svg" alt=""/>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flex justify-between mb-4">
-                                <img src="./img/icon/book1.png" alt=""/>
-                                <img src="./img/icon/book2.png" alt=""/>
+                            <div>
+                                <div class="font-normal text-2xl mb-2">Дополнительные материалы</div>
+                                <div class="bg-white shadow-lg p-4 rounded-3xl mb-4">
+                                    <div class="flex justify-between mb-4">
+                                        <div class="font-medium text-2xl">Книги</div>
+                                        <a href="#" class="blue-color text-xl font-normal">Еще</a>
+                                    </div>
+                                    <div class="flex justify-between mb-4">
+                                        <img src="./img/icon/book1.png" alt=""/>
+                                        <img src="./img/icon/book2.png" alt=""/>
+                                    </div>
+                                </div>
+                                <div class="bg-white shadow-lg p-4 rounded-3xl mt-4">
+                                    <div class="flex justify-between mb-4">
+                                        <div class="font-medium text-2xl">Чек листы</div>
+                                        <a href="#" class="blue-color text-xl font-normal">Еще</a>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <img src="./img/icon/tra1.svg" alt=""/>
+                                        <img src="./img/icon/tra2.png" alt=""/>
+                                        <img src="./img/icon/tra3.png" alt=""/>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="bg-white shadow-lg p-8 rounded-3xl mt-4">
-                            <div class="flex justify-between mb-4">
-                                <div class="font-medium text-2xl">Чек листы</div>
-                                <div class="blue-color text-xl font-normal">Еще</div>
+                    </div>
+                    <div class="card-shadow bg-white p-4 rounded-t-3xl space-y-6 mt-8">
+                        <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:space-y-0 space-y-10">
+                            <div class="grid lg:grid-cols-1 md:grid-cols-1 grid-cols-1 lg:space-y-0 md:space-y-0 space-y-4">
+                                <div class="font-normal text-lg lg:mr-4 md:mr-4">
+                                    Мы в соцсетях:
+                                </div>
+                                <div class="flex lg:ml-4">
+                                    <img class="px-2" src="./img/icon/fb.svg" alt=""/>
+                                    <img class="px-2" src="./img/icon/ins.svg" alt=""/>
+                                    <img class="px-2" src="./img/icon/yt.png" alt=""/>
+                                </div>
                             </div>
-                            <div class="flex justify-between">
-                                <img src="./img/icon/tra1.svg" alt=""/>
-                                <img src="./img/icon/tra2.png" alt=""/>
-                                <img src="./img/icon/tra3.png" alt=""/>
+                            <div class="font-normal text-lg">
+                                Контакты наших менеджеров: <br> <a href="tel:8-777-777-77-77">8-777-777-77-77</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="bg-white shadow-lg p-8 rounded-t-3xl space-y-6 mt-8">
-                <div class="flex justify-between">
-                    <div class="flex">
-                        <div class="font-normal text-lg mr-4">
-                            Мы в соцсетях:
-                        </div>
-                        <div class="flex ml-4">
-                            <img class="mx-2" src="./img/icon/fb.svg" alt=""/>
-                            <img class="mx-2" src="./img/icon/ins.svg" alt=""/>
-                            <img class="mx-2" src="./img/icon/yt.png" alt=""/>
-                        </div>
-                    </div>
-                    <div class="font-normal text-lg">
-                        Контакты наших менеджеров: 8-777-777-77-77
-                    </div>
-                </div>
-            </div>
-
 
         </div>
     </div>
 </div>
 
 
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+
+    // Menu toggle
+    let toggle = document.querySelector('.toggle'),
+        navigation = document.querySelector('.navigation'),
+        main = document.querySelector('.main');
+
+    toggle.onclick = function () {
+        navigation.classList.toggle('active');
+        main.classList.toggle('active');
+    }
+    // add hovered class in selected list item
+    let list = document.querySelectorAll('.navigation li');
+
+    function activeLink() {
+        list.forEach((item) =>
+            item.classList.remove('hovered'));
+        this.classList.add('hovered');
+    }
+
+    list.forEach((item) =>
+        item.addEventListener('mouseover', activeLink))
+</script>
 </body>
 </html>

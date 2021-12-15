@@ -5,182 +5,198 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Главная</title>
+    <title>Document</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/control-panel.css"/>
 </head>
 <body>
 
 <div>
-    <div class="flex">
-        <!--<sideNav/>-->
-        <div class="relative flex min-h-screen sideNav">
-            <!--mobile menu bar-->
-            <div class="absolute">
-                <div class="text-black flex items-center mt-4">
-                    <!--mobile menu button-->
-                    <button id="mobile-menu-button" class="mobile-menu-button p-4 focus:outline-none">
-                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <!--sidebar-->
-            <div id="sidebar"
-                 class="blue sidebar side-nav text-black w-72 space-y-6 py-7 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
-                <!--mobile close button-times-->
-                <div class="flex justify-end mx-2 md:hidden lg:hidden">
-                    <button id="mobile-menu-close" class="mobile-menu-button focus:outline-none">
-                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
-                    </button>
-                </div>
-                <!--logo-->
-                <div class="m-8">
-                    <img src="./img/icon/logo.svg" alt=""/>
-                </div>
-                <!--nav-->
-                <nav class="mt-12">
-                    <ul class="">
-                        <li class="sideBarMenu ml-12 py-4">
-                            <a class="sideBarText focus:bg-white" href="#">
-                                <span class="ml-4">
-                                    <font-awesome-icon icon="wallet"/>
-                                    <span class="text-xl font-bold">Главная</span>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="sideBarMenu ml-12 py-4">
-                            <a class="sideBarText" href="#">
-                                <span class="ml-4">
-                                    <font-awesome-icon icon="wallet"/>
-                                    <span class="text-xl font-bold">Кабинет</span>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="sideBarMenu ml-12 py-4">
-                            <a class="sideBarText" href="#">
-                                <span class="ml-4">
-                                    <font-awesome-icon icon="wallet"/>
-                                    <span class="text-xl font-bold">Уроки</span>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li class="mx-4 my-8">
+                    <a href="#">
+                        <img src="./img/icon/logo.svg" alt="main logo"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home"></ion-icon>
+                        </span>
+                        <span class="title">Главная</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="person"></ion-icon>
+                        </span>
+                        <span class="title">Кабинет</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="document"></ion-icon>
+                        </span>
+                        <span class="title">Уроки</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="w-full mx-8 mt-8">
-            <!--<mainNavBar/>-->
-            <div>
-                <div class="font-medium lg:text-4xl">
-                    Добро пожаловать в iTalent
-                </div>
-            </div>
 
-            <div class="mt-8">
-                <div class="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-4">
-                    <div class="bg-white shadow-lg p-8 rounded-3xl col-span-2">
-                        <div class="flex">
-                            <img class="mr-4" src="./img/icon/work.png" alt=""/>
-                            <div class="text-2xl font-medium ml-4">
-                                <span class="text-3xl font-bold">italent.kz</span> - это научная методология определения
-                                сильных сторон человека. Знание своих
-                                сильных сторон добавляет осознанности в жизни, уверенности в достижении целей, и
-                                развеивает сомнения в выборе.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white shadow-lg p-8 rounded-3xl space-y-6">
-                        <div class="b-t-w-shadow">Скоро</div>
-                        <div class="flex">
-                            <img class="mr-4" src="./img/icon/manWithMicro.svg" alt=""/>
-                            <div class="ml-4">
-                                <div class="font-medium text-2xl">Подкасты</div>
-                                <div class="text-sm font-normal">на тему развития сильных сторон</div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu"></ion-icon>
                 </div>
-                <div class="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-4">
-                    <div class="bg-white shadow-lg p-8 rounded-3xl space-y-6 mt-8">
-                        <div class="font-medium text-2xl">
-                            Инстркция
-                        </div>
+                <!--<div class="search">
+                    <input type="text">
+                </div>-->
+                <!--<div class="userImg">
+                    <img src="" alt="">
+                </div>-->
+            </div>
+            <!--cards-->
+            <div class="cardBox">
+                <div class="">
+                    <div class="">
+                        <!--<mainNavBar/>-->
                         <div>
-                            <img src="./img/videoLesson.svg" alt=""/>
-                        </div>
-                    </div>
-                    <div class="bg-white shadow-lg p-8 rounded-3xl space-y-6 mt-8 text-center">
-                        <div class="font-medium text-2xl">
-                            Оплатить и пройти тест “iTalent”
-                        </div>
-                        <div class="flex justify-center">
-                            <img src="./img/icon/openBook.svg" alt=""/>
-                        </div>
-                        <div>
-                            <button class="blue text-white px-6 py-2 rounded-2xl text-2xl text-base text-white font-medium">
-                                Пройти тест
-                            </button>
-                        </div>
-                    </div>
-                    <div class="bg-white shadow-lg p-8 rounded-3xl space-y-6 mt-8">
-                        <div class="b-t-w-shadow">
-                            25 848 426
-                        </div>
-                        <div class="font-normal text-lg text-center">
-                            Людей в мире прошли тест по данной технологии
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white shadow-lg p-8 rounded-3xl space-y-6 mt-8">
-                    <div class="grid grid-cols-2">
-                        <div class="text-center">
-                            <div class="font-medium text-2xl">
-                                Доступен заказ онлайн разбора вашего теста
-                            </div>
-                            <div class="font-normal text-lg">
-                                Стоимость разбора:5 000 тг
+                            <div class="font-medium lg:text-4xl">
+                                Добро пожаловать в iTalent
                             </div>
                         </div>
-                        <div class="">
-                            <button class="blue text-white px-6 py-2 rounded-2xl text-2xl text-base text-white font-medium">
-                                Заказать
-                            </button>
+
+                        <div class="mt-8">
+                            <div class="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-4">
+                                <div class="bg-white shadow-lg p-8 rounded-3xl lg:col-span-2 md:col-span-2">
+                                    <div class="lg:flex space-y-8">
+                                        <img class="mr-4" src="./img/icon/work.png" alt=""/>
+                                        <div class="text-2xl font-medium ml-4">
+                                            <span class="text-3xl font-bold">italent.kz</span> - это научная методология определения
+                                            сильных сторон человека. Знание своих
+                                            сильных сторон добавляет осознанности в жизни, уверенности в достижении целей, и
+                                            развеивает сомнения в выборе.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-white shadow-lg p-8 rounded-3xl space-y-6">
+                                    <div class="b-t-w-shadow">Скоро</div>
+                                    <div class="flex">
+                                        <img class="mr-4" src="./img/icon/manWithMicro.svg" alt=""/>
+                                        <div class="ml-4">
+                                            <div class="font-medium text-2xl">Подкасты</div>
+                                            <div class="text-sm font-normal">на тему развития сильных сторон</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-4">
+                                <div class="bg-white shadow-lg p-8 rounded-3xl space-y-6 mt-8">
+                                    <div class="font-medium text-2xl">
+                                        Инструкция
+                                    </div>
+                                    <div>
+                                        <img src="./img/videoLesson.svg" alt=""/>
+                                    </div>
+                                </div>
+                                <div class="bg-white shadow-lg p-8 rounded-3xl space-y-6 mt-8 text-center">
+                                    <div class="font-medium text-2xl">
+                                        Оплатить и пройти тест “iTalent”
+                                    </div>
+                                    <div class="flex justify-center">
+                                        <img src="./img/icon/openBook.svg" alt=""/>
+                                    </div>
+                                    <div>
+                                        <button class="blue text-white px-6 py-2 rounded-2xl text-2xl text-base text-white font-medium">
+                                            Пройти тест
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="bg-white shadow-lg p-8 rounded-3xl space-y-6 mt-8">
+                                    <div class="b-t-w-shadow">
+                                        25 848 426
+                                    </div>
+                                    <div class="font-normal text-lg text-center">
+                                        Людей в мире прошли тест по данной технологии
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white shadow-lg p-8 rounded-3xl space-y-6 mt-8">
+                                <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 space-y-8">
+                                    <div class="text-center">
+                                        <div class="font-medium text-2xl">
+                                            Доступен заказ онлайн разбора вашего теста
+                                        </div>
+                                        <div class="font-normal text-lg">
+                                            Стоимость разбора:5 000 тг
+                                        </div>
+                                    </div>
+                                    <div class="text-center lg:flex md:flex lg:justify-end md:justify-end">
+                                        <button class="blue text-white px-6 py-2 rounded-2xl text-2xl text-base text-white font-medium">
+                                            Заказать
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="bg-white shadow-lg p-8 rounded-t-3xl space-y-6 mt-8">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <div class="font-normal text-lg mr-4">
+                                        Мы в соцсетях:
+                                    </div>
+                                    <div class="flex ml-4">
+                                        <img class="mx-2" src="./img/icon/fb.svg" alt=""/>
+                                        <img class="mx-2" src="./img/icon/ins.svg" alt=""/>
+                                        <img class="mx-2" src="./img/icon/yt.png" alt=""/>
+                                    </div>
+                                </div>
+                                <div class="font-normal text-lg">
+                                    Контакты наших менеджеров: 8-777-777-77-77
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
-
-            <div class="bg-white shadow-lg p-8 rounded-t-3xl space-y-6 mt-8">
-                <div class="flex justify-between">
-                    <div class="flex">
-                        <div class="font-normal text-lg mr-4">
-                            Мы в соцсетях:
-                        </div>
-                        <div class="flex ml-4">
-                            <img class="mx-2" src="./img/icon/fb.svg" alt=""/>
-                            <img class="mx-2" src="./img/icon/ins.svg" alt=""/>
-                            <img class="mx-2" src="./img/icon/yt.png" alt=""/>
-                        </div>
-                    </div>
-                    <div class="font-normal text-lg">
-                        Контакты наших менеджеров: 8-777-777-77-77
-                    </div>
-                </div>
-            </div>
-
 
         </div>
     </div>
 </div>
 
 
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+
+    // Menu toggle
+    let toggle = document.querySelector('.toggle'),
+        navigation = document.querySelector('.navigation'),
+        main = document.querySelector('.main');
+
+    toggle.onclick = function () {
+        navigation.classList.toggle('active');
+        main.classList.toggle('active');
+    }
+    // add hovered class in selected list item
+    let list = document.querySelectorAll('.navigation li');
+
+    function activeLink() {
+        list.forEach((item) =>
+            item.classList.remove('hovered'));
+        this.classList.add('hovered');
+    }
+
+    list.forEach((item) =>
+        item.addEventListener('mouseover', activeLink))
+</script>
 </body>
 </html>
