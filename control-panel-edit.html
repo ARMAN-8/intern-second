@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="./css/control-panel.css"/>
+</head>
+<body>
+
+<div>
+  <div class="container">
+    <div class="navigation">
+      <ul>
+        <li class="mx-4 my-8">
+          <a href="#">
+            <img src="./img/icon/logo.svg" alt="main logo"/>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home"></ion-icon>
+                        </span>
+            <span class="title">Главная</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+                        <span class="icon">
+                            <ion-icon name="person"></ion-icon>
+                        </span>
+            <span class="title">Кабинет</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+                        <span class="icon">
+                            <ion-icon name="document"></ion-icon>
+                        </span>
+            <span class="title">Уроки</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="topbar">
+        <div class="toggle">
+          <ion-icon name="menu"></ion-icon>
+        </div>
+        <!--<div class="search">
+            <input type="text">
+        </div>-->
+        <!--<div class="userImg">
+            <img src="" alt="">
+        </div>-->
+      </div>
+      <!--cards-->
+      <div class="cardBox">
+        <div class="">
+          <div class="">
+            <!--<mainNavBar/>-->
+            <div>
+              <div class="font-medium lg:text-4xl md:text-4xl text-2xl">
+                Ваш личный кабинет
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <div class="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-4">
+                <!--profile-edit-->
+                <div class="card-shadow p-8 rounded-3xl col-span-2">
+                  <div class="grid grid-cols-3 mb-8">
+                                        <span class="text-2xl border-dashed border-2 border-blue-600 mr-8 my-0 rounded-2xl">
+                                            <!--<img class="rounded-3xl" src="./img/bleach.png" alt=""/>-->
+                                        </span>
+                    <div class="">
+                      <div>
+                        <div class="font-light text-lg">Выбрать фотографию</div>
+
+                        <div class="image-upload mt-4">
+                          <label for="file-input">
+                            <img src="./img/icon/img.svg"/>
+                          </label>
+
+                          <input id="file-input" type="file" />
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:gap-8 md:gap-6 gap-2 mb-16">
+                      <div>
+                        <label class="font-light text-lg" for="name">Имя</label>
+                        <input class="bg-gray-200 w-full rounded-lg py-2"
+                               id="name" type="text"/>
+                      </div>
+                      <div>
+                        <label class="font-light text-lg" for="age">Возраст</label>
+                        <input class="bg-gray-200 w-full rounded-lg py-2"
+                               id="age" type="number"/>
+                      </div>
+                    </div>
+                    <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:gap-8 md:gap-6 gap-2 mb-8">
+                      <div>
+                        <label class="font-light text-lg" for="new_password">Новый пароль</label>
+                        <input class="bg-gray-200 w-full rounded-lg py-2"
+                               id="new_password" type="password"/>
+                      </div>
+                      <div>
+                        <label class="font-light text-lg" for="confirm_new_password">Подтвердите пароль</label>
+                        <input class="bg-gray-200 w-full rounded-lg py-2"
+                               id="confirm_new_password" type="password"/>
+                      </div>
+                    </div>
+                    <div class="my-4 text-center">
+                      <button class="w-10/12 create-account-btn text-base text-white font-medium py-2">
+                        Сохранить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="card-shadow p-8 rounded-3xl space-y-6 text-center">
+                    <div class="font-medium text-2xl">
+                      Тест “iTalent”
+                    </div>
+                    <div class="flex justify-center">
+                      <img src="./img/icon/openBook.svg" alt=""/>
+                    </div>
+                    <div>
+                      <button class="create-account-btn text-white px-6 py-2 text-2xl text-base text-white font-medium">
+                        Пройти тест
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-shadow p-8 rounded-3xl space-y-6 mt-8">
+                    <div class="font-medium text-2xl">
+                      Мой отчет
+                    </div>
+                    <div>
+                      <img class="w-full" src="./img/report.png" alt=""/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+
+            <div class="card-shadow p-8 rounded-t-3xl space-y-6 mt-8">
+              <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:space-y-0 space-y-10">
+                <div class="grid lg:grid-cols-1 md:grid-cols-2 grid-cols-1 lg:space-y-0 md:space-y-0 space-y-4">
+                  <div class="font-normal text-lg lg:mr-4 md:mr-4">
+                    Мы в соцсетях:
+                  </div>
+                  <div class="flex lg:ml-4">
+                    <img class="px-2" src="./img/icon/fb.svg" alt=""/>
+                    <img class="px-2" src="./img/icon/ins.svg" alt=""/>
+                    <img class="px-2" src="./img/icon/yt.png" alt=""/>
+                  </div>
+                </div>
+                <div class="font-normal text-lg">
+                  Контакты наших менеджеров: <br> <a href="tel:8-777-777-77-77">8-777-777-77-77</a>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+
+  // Menu toggle
+  let toggle = document.querySelector('.toggle'),
+          navigation = document.querySelector('.navigation'),
+          main = document.querySelector('.main');
+
+  toggle.onclick = function () {
+    navigation.classList.toggle('active');
+    main.classList.toggle('active');
+  }
+  // add hovered class in selected list item
+  let list = document.querySelectorAll('.navigation li');
+
+  function activeLink() {
+    list.forEach((item) =>
+            item.classList.remove('hovered'));
+    this.classList.add('hovered');
+  }
+
+  list.forEach((item) =>
+          item.addEventListener('mouseover', activeLink))
+</script>
+</body>
+</html>
